@@ -1,0 +1,279 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 100%, 68%);
+
+  --VeryDarkBlue: hsl(230, 29%, 20%);
+  --DarkGrayishBlue: hsl(230, 11%, 40%);
+  --GrayishBlue: hsl(231, 7%, 65%);
+  --LightGrayishBlue: hsl(207, 33%, 95%);
+
+  --BarlowConden__400__700:'Barlow', sans-serif;
+  --Barlow__400: 'Barlow Condensed', sans-serif;
+}
+
+body {
+  font-size: 18px;
+  position: relative;
+}
+
+.background {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  width: 55%;
+  height: 55%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background-color: var(--LightGrayishBlue);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px 60px;
+  position: relative;
+}
+
+.header__logo {
+  width: 25px;
+  height: 25px;
+}
+
+.menu__icon {
+  cursor: pointer;
+}
+
+
+
+.header__menu {
+  position: absolute;
+  background-color: white;
+  top: 90px;
+  width: 84%;
+  box-shadow: 5px 5px 20px rgba(0,0,0, 0.1), -5px -5px 20px rgba(0,0,0, 0.1);
+  text-align: center;
+  padding: 25px;
+  display: none;
+}
+
+.header__nav__bar {
+  list-style: none;
+  color: var(--VeryDarkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--GrayishBlue);
+  font-family: var(--BarlowConden__400__700);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header__login {
+  background-color: transparent;
+  color: var(--DarkGrayishBlue);
+  text-transform: uppercase;
+  font-family: var(--BarlowConden__400__700);
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+.close__btn {
+  position: absolute;
+  top: -47px;
+  right: 0%;
+  cursor: pointer;
+}
+
+
+
+/*-------main-----------*/
+
+main {
+  padding: 40px 30px;
+  overflow: hidden;
+}
+
+.img__section {
+  width: auto;
+  height: 240px;
+  margin-bottom: 85px;
+}
+
+.up__text {
+  font-family: var(--Barlow__400);
+  color: var(--GrayishBlue);
+  font-size: 0.73em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.up__text span {
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGrayishBlue);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 1.65em;
+  color: var(--VeryDarkBlue);
+  font-family: var(--BarlowConden__400__700);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: var(--DarkGrayishBlue);
+  font-family: var(--BarlowConden__400__700);
+  font-weight: 400;margin-bottom: 25px;
+}
+
+.preview {
+  font-family: var(--Barlow__400);
+  color: var(--GrayishBlue);
+  font-size: 0.73em;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  background-color: var(--Red);
+  color: white;
+  font-family: var(--BarlowConden__400__700);
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+
+  .header__menu {
+    position: unset;
+    background-color: unset;
+    box-shadow: unset;
+    text-align: center;
+    padding: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    width: unset;
+    font-size: 0.85em;
+  }
+  
+  .header__nav__bar {
+    list-style: none;
+    color: var(--VeryDarkBlue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+    padding-bottom: unset;
+    border-bottom: unset;
+    font-family: var(--BarlowConden__400__700);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .nav__bar__item:hover {
+    text-decoration: underline solid var(--VeryDarkBlue);
+  }
+
+  .menu__icon {
+    display: none;
+  }
+
+  .close__btn {
+    display: none;
+  }
+
+  .header__login {
+    margin-top: unset;
+  }
+
+  main {
+    text-align: center;
+  }
+
+  .preview {
+    justify-content: center;
+  }
+  
+}
+
+@media  screen and (min-width: 1000px) {
+
+  body {
+    padding: 8.2% 11.5%;
+    position: relative;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  .text__section {
+    margin-right: 55%;
+    margin-bottom: 10%;
+  }
+
+  .img__section {
+    position: absolute;
+    top: 27%;
+    right: -20%;
+    height: 50%;
+  }
+  .preview {
+    justify-content: flex-start;
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  .img__section {
+    position: absolute;
+    top: 27%;
+    right: -10%;
+    height: 50%;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+
+
+
+
+
